@@ -17,8 +17,9 @@ class Pessoa:
     def nome_e_atributos_de_classe(cls):
         return f'{cls} - olhos {cls.olhos}'
 
+class Homem(Pessoa):
+    pass
+
 if __name__ == '__main__':
-    renzo = Pessoa(nome = 'Renzo', idade = 30)
-    luciano = Pessoa(renzo, nome = 'Luciano', idade = 40)
-    luciano.sobrenome = 'Ramalho'
-    print(Pessoa.nome_e_atributos_de_classe())
+    pessoa = Homem('Anonimo')
+    print(isinstance(pessoa,Pessoa))
